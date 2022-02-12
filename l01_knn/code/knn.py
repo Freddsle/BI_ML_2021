@@ -102,7 +102,7 @@ class KNNClassifier:
            with distances between each test and each train sample
         """
 
-        return 
+        return distance.cdist(X, self.train_X, 'cityblock')
 
 
     def predict_labels_binary(self, distances):
