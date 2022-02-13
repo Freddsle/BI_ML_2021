@@ -1,5 +1,7 @@
+from xml.sax.saxutils import prepare_input_source
 import numpy as np
 from scipy.spatial import distance
+from sklearn.metrics import pairwise_distances
 
 
 class KNNClassifier:
@@ -33,7 +35,7 @@ class KNNClassifier:
         if n_loops == 0:
             distances = self.compute_distances_no_loops(X)
         elif n_loops == 1:
-            distances = self.compute_distances_one_loops(X)
+            distances = self.compute_distances_one_loop(X)
         else:
             distances = self.compute_distances_two_loops(X)
         
@@ -77,16 +79,12 @@ class KNNClassifier:
         distances, np array (num_test_samples, num_train_samples) - array
            with distances between each test and each train sample
         """
-        
         distances = np.full((X.shape[0], self.train_X.shape[0]), None)
 
-        for i, train_vector in enumerate(self.train_X):
-            for j , test_vector in enumerate(X):
-                distances[j, i] = np.abs(test_vector - train_vector).sum()
+        for i, test_vector in enumerate(X):
+            distances[i] = pairwise_distances(test_vector.reshape(1, -1), self.train_X, metric='cityblock')
 
         return distances
-        # distance.cityblock(X, self.train_X)
-        pass
 
 
     def compute_distances_no_loops(self, X):
@@ -117,14 +115,14 @@ class KNNClassifier:
            for every test sample
         """
 
-        n_train = distances.shape[1]
+        #n_train = distances.shape[1]
         n_test = distances.shape[0]
         prediction = np.zeros(n_test)
 
-        """
-        YOUR CODE IS HERE
-        """
-        pass
+        for i in range(n_test):
+            prediction[i] = self.train_y[distances[i].argmin()]
+
+        return prediction
 
 
     def predict_labels_multiclass(self, distances):
