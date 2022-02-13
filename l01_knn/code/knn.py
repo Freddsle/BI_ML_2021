@@ -2,6 +2,7 @@ from xml.sax.saxutils import prepare_input_source
 import numpy as np
 from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
+from statistics import mode
 
 
 class KNNClassifier:
@@ -115,12 +116,22 @@ class KNNClassifier:
            for every test sample
         """
 
-        #n_train = distances.shape[1]
+        # n_train = distances.shape[1]
         n_test = distances.shape[0]
         prediction = np.zeros(n_test)
 
         for i in range(n_test):
-            prediction[i] = self.train_y[distances[i].argmin()]
+            if self.k == 1:
+                prediction[i] = self.train_y[distances[i].argmin()]
+            
+            else:
+                sort_values_index = distances[i].argsort()
+                probable_y = []
+
+                for j in range(self.k):
+                    probable_y.append(self.train_y[sort_values_index[j]])
+                
+                prediction[i] = mode(probable_y)
 
         return prediction
 
@@ -135,13 +146,25 @@ class KNNClassifier:
         Returns:
         pred, np array of int (num_test_samples) - predicted class index 
            for every test sample
+
+        --- The same code as in predict_labels_binary ----
         """
 
-        n_train = distances.shape[0]
+        # n_train = distances.shape[0]
         n_test = distances.shape[0]
         prediction = np.zeros(n_test, np.int)
 
-        """
-        YOUR CODE IS HERE
-        """
-        pass
+        for i in range(n_test):
+            if self.k == 1:
+                prediction[i] = self.train_y[distances[i].argmin()]
+            
+            else:
+                sort_values_index = distances[i].argsort()
+                probable_y = []
+
+                for j in range(self.k):
+                    probable_y.append(self.train_y[sort_values_index[j]])
+                
+                prediction[i] = mode(probable_y)
+
+        return prediction
