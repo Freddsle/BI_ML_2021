@@ -12,7 +12,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 source $HOME/.poetry/env
 
 # prepare project
-git clone https://github.com/Freddsle/age_patterns
+git clone https://github.com/Freddsle/BI_ML_2021
 cd ./code
 
 
