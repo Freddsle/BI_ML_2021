@@ -1097,10 +1097,25 @@ python-versions = "*"
 [package.dependencies]
 notebook = ">=4.4.1"
 
+[[package]]
+name = "yellowbrick"
+version = "1.4"
+description = "A suite of visual analysis and diagnostic tools for machine learning."
+category = "main"
+optional = false
+python-versions = ">=3.4, <4"
+
+[package.dependencies]
+cycler = ">=0.10.0"
+matplotlib = ">=2.0.2,<3.0.0 || >3.0.0"
+numpy = ">=1.16.0"
+scikit-learn = ">=1.0.0"
+scipy = ">=1.0.0"
+
 [metadata]
 lock-version = "1.1"
 python-versions = ">3.10,<3.11"
-content-hash = "79a018eef059ae76384f6302e510707c22d9408809c1252d9319f5932d0cfb63"
+content-hash = "77a21b5bdc6c2e6474dc2f9aa858ece1a55e1aec409f23a07195806994623719"
 
 [metadata.files]
 appnope = [
@@ -1960,4 +1975,8 @@ webencodings = [
 widgetsnbextension = [
     {file = "widgetsnbextension-3.5.2-py2.py3-none-any.whl", hash = "sha256:763a9fdc836d141fa080005a886d63f66f73d56dba1fb5961afc239c77708569"},
     {file = "widgetsnbextension-3.5.2.tar.gz", hash = "sha256:e0731a60ba540cd19bbbefe771a9076dcd2dde90713a8f87f27f53f2d1db7727"},
+]
+yellowbrick = [
+    {file = "yellowbrick-1.4-py3-none-any.whl", hash = "sha256:16cc4af0474272b9ce103e3d061ff4b74edacf281f206cd7c483418357c5831b"},
+    {file = "yellowbrick-1.4.tar.gz", hash = "sha256:f690b8f8b7e6962dfc059ec1d59606913561addcc5948377d91f1681ef46874b"},
 ]
