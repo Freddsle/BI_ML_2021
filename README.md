@@ -10,6 +10,7 @@
 
 
 3. Practice with clustering (KMeans, AgglomerativeClustering, DBSCAN, OPTICS, SpectralClustering, MiniBatchKMeans, Birch) in `l3_clustering/code/Cluster_tSNE.ipynb`. 
+    
     load_digits dataset from sklearn and flow cytometry dataset (in `l3_clustering/data_folder/flow_c_data.csv`) used.
 
 
