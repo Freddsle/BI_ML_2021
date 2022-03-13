@@ -20,7 +20,8 @@
 
 # Install requirements with pip 
 
-Install requirements: `pip install -r ./01_knn/code/requirements.txt`
+Install requirements: `pip install -r ./requirements.txt`
+
 
 # Install and run with poetry
 ```console
@@ -35,7 +36,6 @@ source $HOME/.poetry/env
 # prepare project
 git clone https://github.com/Freddsle/BI_ML_2021
 cd ./code
-
 
 # create env
 poetry env use python3.10
