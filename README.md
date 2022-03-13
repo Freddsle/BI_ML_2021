@@ -13,6 +13,11 @@
     load_digits dataset from sklearn and flow cytometry dataset (in `l3_clustering/data_folder/flow_c_data.csv`) used.
 
 
+4. Group task about Decision Tree.
+
+5. Ensembles. RandomForestClassifier,ExtraTreesClassifier, VotingClassifier. In `l5_ensembles/code/Ensembles.ipynb`.
+
+
 # Install requirements with pip 
 
 Install requirements: `pip install -r ./01_knn/code/requirements.txt`
