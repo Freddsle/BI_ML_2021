@@ -17,6 +17,7 @@ xgboost = "^1.5.2"
 lightgbm = "^3.3.2"
 catboost = "^1.0.4"
 gdown = "^4.4.0"
+bayesian-optimization = "^1.2.0"
 
 
 [tool.poetry.dev-dependencies]
