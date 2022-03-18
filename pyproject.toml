@@ -18,6 +18,8 @@ lightgbm = "^3.3.2"
 catboost = "^1.0.4"
 gdown = "^4.4.0"
 optuna = "^2.10.0"
+ujson = "^5.1.0"
+tqdm = "^4.63.0"
 
 
 [tool.poetry.dev-dependencies]
