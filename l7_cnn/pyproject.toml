@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "BI_ML_2021"
+version = "0.1"
+description = "Machine Learning BI course."
+repository = "https://github.com/Freddsle/BI_ML_2021/"
+authors = ["Yuliya Burankova"]
+
+[tool.poetry.dependencies]
+python = ">3.10,<3.11"
+numpy = "^1.22.2"
+torch = "^1.11.0"
+torchvision = "^0.12.0"
+matplotlib = "^3.5.1"
+seaborn = "^0.11.2"
+
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
