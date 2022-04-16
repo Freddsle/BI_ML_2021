@@ -4,12 +4,14 @@
     - [Fashion-MNIST dataset](https://www.kaggle.com/zalando-research/fashionmnist)
     - [Diabetes dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset)
 
+
 2. Practice with linear models and gradient descent (LinearRegression, LogisticRegression, Pipeline from sklearn) in `l2_linmodels_GD/code/Linear_models.ipynb`. 
     
     load_boston dataset from sklearn and [pokemon](https://www.kaggle.com/abcsds/pokemon) dataset used.
 
 
 3. Practice with clustering (KMeans, AgglomerativeClustering, DBSCAN, OPTICS, SpectralClustering, MiniBatchKMeans, Birch) in `l3_clustering/code/Cluster_tSNE.ipynb`. 
+    
     load_digits dataset from sklearn and flow cytometry dataset (in `l3_clustering/data_folder/flow_c_data.csv`) used.
 
 
