@@ -4,6 +4,7 @@
     - [Fashion-MNIST dataset](https://www.kaggle.com/zalando-research/fashionmnist)
     - [Diabetes dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset)
 
+
 2. Practice with linear models and gradient descent (LinearRegression, LogisticRegression, Pipeline from sklearn) in `l2_linmodels_GD/code/Linear_models.ipynb`. 
     
     load_boston dataset from sklearn and [pokemon](https://www.kaggle.com/abcsds/pokemon) dataset used.
